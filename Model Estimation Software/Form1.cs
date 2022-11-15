@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using System.IO;
 namespace Model_Estimation_Software
@@ -24,7 +25,54 @@ namespace Model_Estimation_Software
             textBoxPM.Text = txtLines[0];
             textBoxPG.Text = txtLines[1];   
             textBoxMIN.Text = txtLines[2];
-            MessageBox.Show("Bienvenido, al rellenar los campos solo escriba numeros enteros sin ningun simbolo");
+
+            comboBox1.Items.Add("Español");
+            comboBox1.Items.Add("English");
+
+            comboBox1.SelectedIndex = int.Parse(txtLines[3]);
+
+            if (comboBox1.SelectedIndex == 1)
+            {
+                #region txt en
+                groupBox1.Text = ResEn.Datos;
+                groupBox2.Text = ResEn.Est;
+                groupBox3.Text = ResEn.Pers;
+                label1.Text = ResEn.CantModel;
+                label2.Text = ResEn.CantG;
+                label3.Text = ResEn.TimeImpH;
+                label6.Text = ResEn.TimeImpMin;
+                buttonEstimate.Text = ResEn.Estimar;
+                buttonClear.Text = ResEn.Borrar_Todo;
+                checkBoxPrecios.Text = ResEn.Ver;
+                label8.Text = ResEn.Ppm;
+                label4.Text = ResEn.pp3g;
+                label9.Text = ResEn.pc30m;
+                buttonSave.Text = ResEn.Guardar;
+                label5.Text = ResEn.Por + ": " + "DevElop";
+                label7.Text = ResEn.Lenguaje;
+                #endregion
+            }
+            else
+            {
+                #region txt es
+                groupBox1.Text = Res.Datos;
+                groupBox2.Text = Res.Est;
+                groupBox3.Text = Res.Pers;
+                label1.Text = Res.CantModel;
+                label2.Text = Res.CantG;
+                label3.Text = Res.TimeImpH;
+                label6.Text = Res.TimeImpMin;
+                buttonEstimate.Text = Res.Estimar;
+                buttonClear.Text = Res.Borrar_Todo;
+                checkBoxPrecios.Text = Res.Ver;
+                label8.Text = Res.Ppm;
+                label4.Text = Res.pp3g;
+                label9.Text = Res.pc30m;
+                buttonSave.Text = Res.Guardar;
+                label5.Text = Res.Por + ": " + "DevElop";
+                label7.Text = Res.Lenguaje;
+                #endregion
+            }
         }
 
         void EstimateCost()
@@ -112,31 +160,10 @@ namespace Model_Estimation_Software
                 sw.WriteLine(textBoxPM.Text);
                 sw.WriteLine(textBoxPG.Text);
                 sw.WriteLine(textBoxMIN.Text);
+                sw.WriteLine(comboBox1.SelectedIndex.ToString());
                 sw.Close();
+                Application.Restart();
             }
-        }
-        #region trash
-        private void textBox1_TextChanged(object sender, EventArgs e) { } private void groupBox1_Enter(object sender, EventArgs e) { }private void label4_Click(object sender, EventArgs e) { }private void label6_Click(object sender, EventArgs e) { }private void textBox3_TextChanged(object sender, EventArgs e) { }private void textBoxPrntWatt_TextChanged(object sender, EventArgs e) { }
-        #endregion
-
-        private void textBoxMinTime_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxG_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxHourTime_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void groupBox2_Enter(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Model_Estimation_Software
                 sw.WriteLine("1.00");
                 sw.WriteLine("0.50");
                 sw.WriteLine("0.50");
-                sw.WriteLine("0.50");
+                sw.WriteLine("0");
                 sw.Close();
             }
          

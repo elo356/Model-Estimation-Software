@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Model Estimation Software")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Estimate your 3d printing product price")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("DevElop")]
 [assembly: AssemblyProduct("Model Estimation Software")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]

@@ -53,6 +53,8 @@ namespace Model_Estimation_Software
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label6 = new System.Windows.Forms.Label();
             this.textBoxMinTime = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBoxPrecios.SuspendLayout();
@@ -68,7 +70,6 @@ namespace Model_Estimation_Software
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Estimacion";
-            this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // textTotal
             // 
@@ -101,6 +102,8 @@ namespace Model_Estimation_Software
             // 
             // groupBoxPrecios
             // 
+            this.groupBoxPrecios.Controls.Add(this.comboBox1);
+            this.groupBoxPrecios.Controls.Add(this.label7);
             this.groupBoxPrecios.Controls.Add(this.label9);
             this.groupBoxPrecios.Controls.Add(this.textBoxMIN);
             this.groupBoxPrecios.Controls.Add(this.label4);
@@ -129,7 +132,6 @@ namespace Model_Estimation_Software
             this.textBoxMIN.Name = "textBoxMIN";
             this.textBoxMIN.Size = new System.Drawing.Size(127, 20);
             this.textBoxMIN.TabIndex = 12;
-            this.textBoxMIN.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // label4
             // 
@@ -168,9 +170,9 @@ namespace Model_Estimation_Software
             this.checkBoxPrecios.AutoSize = true;
             this.checkBoxPrecios.Location = new System.Drawing.Point(6, 34);
             this.checkBoxPrecios.Name = "checkBoxPrecios";
-            this.checkBoxPrecios.Size = new System.Drawing.Size(144, 17);
+            this.checkBoxPrecios.Size = new System.Drawing.Size(45, 17);
             this.checkBoxPrecios.TabIndex = 8;
-            this.checkBoxPrecios.Text = "Ver precios por categoria";
+            this.checkBoxPrecios.Text = "Ver ";
             this.checkBoxPrecios.UseVisualStyleBackColor = true;
             this.checkBoxPrecios.CheckedChanged += new System.EventHandler(this.checkBoxPrecios_CheckedChanged);
             // 
@@ -209,7 +211,6 @@ namespace Model_Estimation_Software
             this.textBoxM.Name = "textBoxM";
             this.textBoxM.Size = new System.Drawing.Size(127, 20);
             this.textBoxM.TabIndex = 1;
-            this.textBoxM.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -226,7 +227,6 @@ namespace Model_Estimation_Software
             this.textBoxG.Name = "textBoxG";
             this.textBoxG.Size = new System.Drawing.Size(127, 20);
             this.textBoxG.TabIndex = 3;
-            this.textBoxG.TextChanged += new System.EventHandler(this.textBoxG_TextChanged);
             // 
             // label2
             // 
@@ -243,7 +243,6 @@ namespace Model_Estimation_Software
             this.textBoxHourTime.Name = "textBoxHourTime";
             this.textBoxHourTime.Size = new System.Drawing.Size(127, 20);
             this.textBoxHourTime.TabIndex = 5;
-            this.textBoxHourTime.TextChanged += new System.EventHandler(this.textBoxHourTime_TextChanged);
             // 
             // label3
             // 
@@ -270,7 +269,6 @@ namespace Model_Estimation_Software
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // label6
             // 
@@ -288,7 +286,23 @@ namespace Model_Estimation_Software
             this.textBoxMinTime.Size = new System.Drawing.Size(127, 20);
             this.textBoxMinTime.TabIndex = 7;
             this.textBoxMinTime.Text = "0";
-            this.textBoxMinTime.TextChanged += new System.EventHandler(this.textBoxMinTime_TextChanged);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(6, 153);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(38, 13);
+            this.label7.TabIndex = 15;
+            this.label7.Text = "Idioma";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(122, 150);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.TabIndex = 16;
             // 
             // Form1
             // 
@@ -305,7 +319,7 @@ namespace Model_Estimation_Software
             this.MaximumSize = new System.Drawing.Size(816, 489);
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "Form1";
-            this.Text = "Printing Cost Estimation Software";
+            this.ShowIcon = false;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -345,6 +359,8 @@ namespace Model_Estimation_Software
         private System.Windows.Forms.Button buttonSave;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBoxMinTime;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
